@@ -15,7 +15,7 @@
     <header class="mast">
       <div class="eyebrow">개인 홈페이지</div>
       <a class="home" href="{{ '/' | relative_url }}"><span class="site-title">{{ site.title }}</span></a>
-      <p class="tagline">{{ site.description }}</p>
+      {% if site.description != "" %}<p class="tagline">{{ site.description }}</p>{% endif %}
     </header>
 
     <main>
