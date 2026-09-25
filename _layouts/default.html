@@ -33,14 +33,15 @@
   </div>
   <script>
     (function () {
+      // Labels are space-padded: the badge service underestimates Korean glyph width.
       // Day key is fixed to Korea time so the "오늘" count rolls over at KST midnight.
       var now = new Date();
       var k = new Date(now.getTime() + (now.getTimezoneOffset() + 540) * 60000);
       var p = function (n) { return ('0' + n).slice(-2); };
       var day = k.getFullYear() + '-' + p(k.getMonth() + 1) + '-' + p(k.getDate());
       var base = 'https://visitor-badge.laobi.icu/badge?left_color=%235C6878&right_color=%231E5A85&left_text=';
-      document.getElementById('badge-today').src = base + encodeURIComponent('오늘') + '&page_id=guk7608.blog.daily.' + day;
-      document.getElementById('badge-total').src = base + encodeURIComponent('전체') + '&page_id=guk7608.blog.total';
+      document.getElementById('badge-today').src = base + encodeURIComponent(' 오늘 ') + '&page_id=guk7608.blog.daily.' + day;
+      document.getElementById('badge-total').src = base + encodeURIComponent(' 전체 ') + '&page_id=guk7608.blog.total';
     })();
   </script>
 </body>
