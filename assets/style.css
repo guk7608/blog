@@ -179,4 +179,6 @@ footer {
   font-family: var(--mono);
 }
 footer a { color: var(--faint); }
+footer .counter { display: inline-flex; gap: 6px; align-items: center; }
+footer .counter img { display: block; height: 20px; }
 footer a:hover { color: var(--accent); }
