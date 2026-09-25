@@ -1,0 +1,18 @@
+---
+layout: default
+---
+{% if site.posts.size == 0 %}
+<p class="status">아직 올라온 글이 없습니다.</p>
+{% else %}
+<ol class="posts">
+  {% for post in site.posts %}
+  <li class="post">
+    <div class="meta"><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%Y.%m.%d %H:%M' }}</time></div>
+    <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+    <p class="excerpt">{{ post.content | strip_html | strip | truncate: 180 }}</p>
+    <a class="more" href="{{ post.url | relative_url }}">전체 읽기 →</a>
+  </li>
+  {% endfor %}
+</ol>
+<div class="count">글 {{ site.posts.size }}편</div>
+{% endif %}

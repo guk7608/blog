@@ -1,0 +1,22 @@
+title: 엘리사마의 글방
+description: 생각과 묵상을 적어 두는 곳
+lang: ko
+timezone: Asia/Seoul
+
+# GitHub 저장소 정보 (글쓰기 페이지가 사용)
+github_user: guk7608
+github_repo: blog
+github_branch: main
+
+baseurl: /blog
+url: https://guk7608.github.io
+
+permalink: /posts/:year/:month/:day/:title/
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: true
+
+exclude:
+  - README.md
