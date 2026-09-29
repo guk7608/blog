@@ -18,5 +18,9 @@ kramdown:
   input: GFM
   hard_wrap: true
 
+plugins:
+  - jekyll-sitemap
+  - jekyll-feed
+
 exclude:
   - README.md
